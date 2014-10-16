@@ -1,6 +1,10 @@
 VPImageCropper
 ==============
 
+##Installation
+###Copy Source Files
+You can simply copy VPImageCropperViewController.* files into you project.
+
 ##Usage
 It's incredibly easy to use this kit. Before present the cropper view controller, you should implement the protocol ``VPImageCropperDelegate``:
 
