@@ -22,6 +22,9 @@
 @property (nonatomic, assign) NSInteger tag;
 @property (nonatomic, assign) id<VPImageCropperDelegate> delegate;
 @property (nonatomic, assign) CGRect cropFrame;
+@property (nonatomic, strong) NSString *confirmTitle;
+@property (nonatomic, strong) NSString *cancelTitle;
+@property (nonatomic, strong) UIColor *btnBgColor;
 
 - (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio;
 

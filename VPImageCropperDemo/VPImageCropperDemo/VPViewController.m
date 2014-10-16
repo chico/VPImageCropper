@@ -109,6 +109,9 @@
         // present the cropper view controller
         VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
         imgCropperVC.delegate = self;
+        imgCropperVC.confirmTitle = @"确定";
+        imgCropperVC.cancelTitle = @"取消";
+        imgCropperVC.btnBgColor = [UIColor clearColor];
         [self presentViewController:imgCropperVC animated:YES completion:^{
             // TO DO
         }];
