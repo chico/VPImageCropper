@@ -2,8 +2,20 @@ VPImageCropper
 ==============
 
 ##Installation
+
 ###Copy Source Files
+
 You can simply copy VPImageCropperViewController.* files into you project.
+
+###Using CocoaPods
+
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Get Started](http://cocoapods.org/#get_started) section for more details.
+
+#### Podfile
+```
+platform :ios, '6.0'
+pod 'VPImageCropper', '~>0.0.1'
+```
 
 ##Usage
 It's incredibly easy to use this kit. Before present the cropper view controller, you should implement the protocol ``VPImageCropperDelegate``:
