@@ -52,6 +52,7 @@
 #pragma mark VPImageCropperDelegate
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
     self.portraitImageView.image = editedImage;
+    NSLog(@"edited image size:%@", NSStringFromCGSize(editedImage.size));
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         // TO DO
     }];
@@ -105,9 +106,9 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:^() {
         UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-        portraitImg = [self imageByScalingToMaxSize:portraitImg];
+//        portraitImg = [self imageByScalingToMaxSize:portraitImg];
         // present the cropper view controller
-        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
+        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:20.0];
         imgCropperVC.delegate = self;
         imgCropperVC.confirmTitle = @"确定";
         imgCropperVC.cancelTitle = @"取消";
