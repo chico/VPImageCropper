@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "VPImageCropper"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Used for cropping user portrait."
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "5.0"
 
-  s.source       = { :git => "https://github.com/jiecao-fm/VPImageCropper.git", :tag => "v0.0.1" }
+  s.source       = { :git => "https://github.com/jiecao-fm/VPImageCropper.git", :tag => "v0.0.2" }
 
 
   s.source_files  = "VPImageCropperDemo/VPImageCropper/**/*.*"
