@@ -127,13 +127,13 @@
 }
 
 - (void)cancel:(id)sender {
-    if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(imageCropperDidCancel:)]) {
         [self.delegate imageCropperDidCancel:self];
     }
 }
 
 - (void)confirm:(id)sender {
-    if (self.delegate && [self.delegate conformsToProtocol:@protocol(VPImageCropperDelegate)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(imageCropper:didFinished:)]) {
         [self.delegate imageCropper:self didFinished:[self getSubImage]];
     }
 }
