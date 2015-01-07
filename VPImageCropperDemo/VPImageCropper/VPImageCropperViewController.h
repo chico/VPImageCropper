@@ -25,6 +25,8 @@
 @property (nonatomic, strong) NSString *confirmTitle;
 @property (nonatomic, strong) NSString *cancelTitle;
 @property (nonatomic, strong) UIColor *btnBgColor;
+@property (nonatomic, strong) UIFont *cancelBtnFont;
+@property (nonatomic, strong) UIFont *confirmBtnFont;
 
 /** Color of the crop rectangle (defaults to yellow if not specified) */
 @property (nonatomic, strong) UIColor *cropRectColor;

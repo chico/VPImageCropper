@@ -104,7 +104,7 @@
     cancelBtn.backgroundColor = self.btnBgColor ? self.btnBgColor : [UIColor blackColor];
     cancelBtn.titleLabel.textColor = [UIColor whiteColor];
     [cancelBtn setTitle:self.cancelTitle ? self.cancelTitle : @"Cancel" forState:UIControlStateNormal];
-    [cancelBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+    [cancelBtn.titleLabel setFont:self.cancelBtnFont ? self.cancelBtnFont : [UIFont boldSystemFontOfSize:18.0f]];
     [cancelBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [cancelBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
     [cancelBtn.titleLabel setNumberOfLines:0];
@@ -116,7 +116,7 @@
     confirmBtn.backgroundColor = self.btnBgColor ? self.btnBgColor : [UIColor blackColor];
     confirmBtn.titleLabel.textColor = [UIColor whiteColor];
     [confirmBtn setTitle:self.confirmTitle ? self.confirmTitle : @"OK" forState:UIControlStateNormal];
-    [confirmBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+    [confirmBtn.titleLabel setFont:self.confirmBtnFont ? self.confirmBtnFont : [UIFont boldSystemFontOfSize:18.0f]];
     [confirmBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
     confirmBtn.titleLabel.textColor = [UIColor whiteColor];
     [confirmBtn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
