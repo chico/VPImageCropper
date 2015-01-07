@@ -26,6 +26,9 @@
 @property (nonatomic, strong) NSString *cancelTitle;
 @property (nonatomic, strong) UIColor *btnBgColor;
 
+/** Color of the crop rectangle (defaults to yellow if not specified) */
+@property (nonatomic, strong) UIColor *cropRectColor;
+
 - (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio;
 
 @end
