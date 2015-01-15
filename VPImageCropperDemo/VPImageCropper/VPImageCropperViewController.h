@@ -31,6 +31,9 @@
 /** Color of the crop rectangle (defaults to yellow if not specified) */
 @property (nonatomic, strong) UIColor *cropRectColor;
 
+/** If YES, then the image will be sized to initally aspect fill the dimensions of the controller's view */
+@property (nonatomic, assign) BOOL shouldInitiallyAspectFillImage;
+
 - (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio;
 
 @end
