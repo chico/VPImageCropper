@@ -72,6 +72,18 @@
     // scale to fit the screen
     CGFloat oriWidth = self.cropFrame.size.width;
     CGFloat oriHeight = self.originalImage.size.height * (oriWidth / self.originalImage.size.width);
+    
+    if (self.shouldInitiallyAspectFillImage)
+    {
+        CGFloat scaleWidth = self.view.frame.size.width / oriWidth;
+        CGFloat scaleHeight = self.view.frame.size.height / oriHeight;
+        
+        CGFloat scale = fmax(scaleWidth, scaleHeight);
+        
+        oriWidth *= scale;
+        oriHeight *= scale;
+    }
+    
     CGFloat oriX = self.cropFrame.origin.x + (self.cropFrame.size.width - oriWidth) / 2;
     CGFloat oriY = self.cropFrame.origin.y + (self.cropFrame.size.height - oriHeight) / 2;
     self.oldFrame = CGRectMake(oriX, oriY, oriWidth, oriHeight);
