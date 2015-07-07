@@ -112,6 +112,11 @@
 }
 
 - (void)initControlBtn {
+    UIView *vw = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 50.0f, self.view.frame.size.width, 50)];
+    vw.backgroundColor = [UIColor blackColor];
+    
+    [self.view addSubview:vw];
+    
     UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50.0f, 100, 50)];
     cancelBtn.backgroundColor = self.btnBgColor ? self.btnBgColor : [UIColor blackColor];
     cancelBtn.titleLabel.textColor = [UIColor whiteColor];
