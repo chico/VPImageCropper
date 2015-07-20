@@ -75,8 +75,8 @@
     
     if (self.shouldInitiallyAspectFillImage)
     {
-        CGFloat scaleWidth = self.view.frame.size.width / oriWidth;
-        CGFloat scaleHeight = self.view.frame.size.height / oriHeight;
+        CGFloat scaleWidth = self.cropFrame.size.width / oriWidth;
+        CGFloat scaleHeight = self.cropFrame.size.height / oriHeight;
         
         CGFloat scale = fmax(scaleWidth, scaleHeight);
         
